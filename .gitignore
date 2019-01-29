@@ -1,9 +1,7 @@
-# Exclude the content of the build, the output and the docs folders except the folders itself
+# Exclude the content of the build, the binary output and the generated docs folders except the folders itself
 build*/*
 !build*/.gitkeep
 bin/*
 !bin/.gitkeep
-doc/*
-!doc/.gitkeep
 gendocs/*
 !gendocs/.gitkeep
