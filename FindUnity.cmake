@@ -1,0 +1,19 @@
+set(UNITY_MAIN_HEADER unity.h)
+
+file(GLOB_RECURSE UNITY_SRC_PATH ${UNITY_MAIN_HEADER})
+if(UNITY_SRC_PATH)
+    get_filename_component(UNITY_INCLUDE_DIR ${UNITY_SRC_PATH} DIRECTORY)
+elseif(Unity_FIND_REQUIRED)
+    message(FATAL_ERROR "Could not find Unity")
+endif()
+
+set(Unity_INCLUDE_DIRS
+    ${UNITY_INCLUDE_DIR}
+)
+set(Unity_SOURCES
+    ${UNITY_INCLUDE_DIR}/unity.c
+)
+
+INCLUDE(FindPackageHandleStandardArgs)
+
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(Unity DEFAULT_MSG Unity_INCLUDE_DIRS Unity_SOURCES)
