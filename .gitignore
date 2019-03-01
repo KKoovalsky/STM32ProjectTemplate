@@ -5,3 +5,11 @@ bin/*
 !bin/.gitkeep
 gendocs/*
 !gendocs/.gitkeep
+
+# Ignore vim files
+*.swp
+
+tags
+.gdb_history
+
+app/internal_api/non-os/credentials.h
